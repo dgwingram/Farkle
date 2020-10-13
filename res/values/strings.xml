@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Farkle</string>
+    <string name="side_one">1</string>
+    <string name="side_two">2</string>
+    <string name="side_three">3</string>
+    <string name="side_four">4</string>
+    <string name="side_five">5</string>
+    <string name="side_six">6</string>
+    <string name="keepDiceBtnTxt">Greed</string>
+    <string name="roleTxt">Roll</string>
+    <string name="txtScoreHolder">10,000</string>
+    <string name="txtNameHolder">Player #</string>
+    <string name="points">Points</string>
+    <string name="bankPoints">Bank</string>
+    <string name="dice">Dice</string>
+</resources>
