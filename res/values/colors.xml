@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff6f00</color>
+    <color name="colorPrimaryDark">#c43e00</color>
+    <color name="colorPrimaryLight">#ffa040</color>
+    <color name="colorPrimaryText">#000</color>
+
+    <color name="colorAccent">#26c6da</color>
+    <color name="colorAccentDark">#0095a8</color>
+    <color name="colorAccentLight">#63a4ff</color>
+    <color name="colorAccentText">#fff</color>
+
+    <!-- Dice Colours -->
+    <color name="colorDiceText">#484549</color>
+    <color name="colorDiceBackground">#fff</color>
+    <color name="colorDiceSelected">#dd7</color>
+    <color name="colorDiceFarkle">#a90000</color>
+</resources>
