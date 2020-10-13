@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnDie1"
+        android:onClick="diceOnclick"
+        android:background="@color/colorDiceBackground"
+        android:textColor="@color/colorDiceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dice"
+        android:text="@string/side_one"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnDie2"
+        app:layout_constraintEnd_toStartOf="@+id/btnDie2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnDie2"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:id="@+id/btnDie2"
+        android:background="@color/colorDiceBackground"
+        android:textColor="@color/colorDiceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/side_two"
+        android:onClick="diceOnclick"
+        android:fontFamily="@font/dice"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnDie5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnDie3"
+        android:onClick="diceOnclick"
+        android:background="@color/colorDiceBackground"
+        android:textColor="@color/colorDiceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dice"
+        android:text="@string/side_three"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnDie2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnDie2"
+        app:layout_constraintTop_toTopOf="@+id/btnDie2" />
+
+    <Button
+        android:id="@+id/btnDie4"
+        android:onClick="diceOnclick"
+        android:background="@color/colorDiceBackground"
+        android:textColor="@color/colorDiceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dice"
+        android:text="@string/side_four"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnDie5"
+        app:layout_constraintEnd_toStartOf="@+id/btnDie5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnDie5" />
+
+    <Button
+        android:id="@+id/btnDie5"
+        android:onClick="diceOnclick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorDiceBackground"
+        android:fontFamily="@font/dice"
+        android:text="@string/side_five"
+
+        android:textColor="@color/colorDiceText"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnRoleDie"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnDie6"
+        android:onClick="diceOnclick"
+        android:background="@color/colorDiceBackground"
+        android:textColor="@color/colorDiceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dice"
+        android:text="@string/side_six"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnDie5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnDie5"
+        app:layout_constraintTop_toTopOf="@+id/btnDie5" />
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorAccentDark"
+
+        android:text="@string/keepDiceBtnTxt"
+        android:textColor="@color/colorAccentText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.4" />
+
+
+    <Button
+        android:id="@+id/btnBank"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorAccentDark"
+        android:text="@string/bankPoints"
+        android:textColor="@color/colorAccentText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnStop"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <TextView
+        android:id="@+id/txtvScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/points"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Player 1-->
+    <TextView
+        android:id="@+id/txtvNamePlayer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/txtNameHolder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtvScore" />
+
+    <TextView
+        android:id="@+id/txtvScorePlayer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtScoreHolder"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtvNamePlayer1"
+        app:layout_constraintStart_toStartOf="@+id/txtvNamePlayer1"
+        app:layout_constraintTop_toBottomOf="@+id/txtvNamePlayer1" />
+
+    <!-- Player 2-->
+    <TextView
+        android:id="@+id/txtvNamePlayer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/txtNameHolder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtvScore" />
+
+    <TextView
+        android:id="@+id/txtvScorePlayer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtScoreHolder"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtvNamePlayer2"
+        app:layout_constraintStart_toStartOf="@+id/txtvNamePlayer2"
+        app:layout_constraintTop_toBottomOf="@+id/txtvNamePlayer2" />
+
+    <!-- Player 3-->
+    <TextView
+        android:id="@+id/txtvNamePlayer3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/txtNameHolder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtvScorePlayer1" />
+
+    <TextView
+        android:id="@+id/txtvScorePlayer3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtScoreHolder"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtvNamePlayer3"
+        app:layout_constraintStart_toStartOf="@+id/txtvNamePlayer3"
+        app:layout_constraintTop_toBottomOf="@+id/txtvNamePlayer3" />
+
+    <!-- Player 4-->
+    <TextView
+        android:id="@+id/txtvNamePlayer4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/txtNameHolder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtvScorePlayer2" />
+
+    <TextView
+        android:id="@+id/txtvScorePlayer4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtScoreHolder"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtvNamePlayer4"
+        app:layout_constraintStart_toStartOf="@+id/txtvNamePlayer4"
+        app:layout_constraintTop_toBottomOf="@+id/txtvNamePlayer4" />
+    <!-- Player 5-->
+    <TextView
+        android:id="@+id/txtvNamePlayer5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/txtNameHolder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtvScorePlayer3" />
+
+    <TextView
+        android:id="@+id/txtvScorePlayer5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtScoreHolder"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtvNamePlayer5"
+        app:layout_constraintStart_toStartOf="@+id/txtvNamePlayer5"
+        app:layout_constraintTop_toBottomOf="@+id/txtvNamePlayer5" />
+
+    <!-- Player 6-->
+    <TextView
+        android:id="@+id/txtvNamePlayer6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/txtNameHolder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtvScorePlayer4" />
+
+    <TextView
+        android:id="@+id/txtvScorePlayer6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtScoreHolder"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtvNamePlayer6"
+        app:layout_constraintStart_toStartOf="@+id/txtvNamePlayer6"
+        app:layout_constraintTop_toBottomOf="@+id/txtvNamePlayer6" />
+
+    <!-- Player 7-->
+    <TextView
+        android:id="@+id/txtvNamePlayer7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/txtNameHolder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtvScorePlayer5" />
+
+    <TextView
+        android:id="@+id/txtvScorePlayer7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtScoreHolder"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtvNamePlayer7"
+        app:layout_constraintStart_toStartOf="@+id/txtvNamePlayer7"
+        app:layout_constraintTop_toBottomOf="@+id/txtvNamePlayer7" />
+
+    <!-- Player 8-->
+    <TextView
+        android:id="@+id/txtvNamePlayer8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/txtNameHolder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtvScorePlayer6" />
+
+    <TextView
+        android:id="@+id/txtvScorePlayer8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtScoreHolder"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtvNamePlayer8"
+        app:layout_constraintStart_toStartOf="@+id/txtvNamePlayer8"
+        app:layout_constraintTop_toBottomOf="@+id/txtvNamePlayer8" />
+
+    <TextView
+        android:id="@+id/txtConsole"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/dice"
+        app:layout_constraintBottom_toTopOf="@+id/txtvTally"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtvScorePlayer7"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtScoreHolder"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtvScore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btnDie2"
+        app:layout_constraintTop_toTopOf="@+id/txtvScore" />
+
+    <TextView
+        android:id="@+id/txtvTally"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtScoreHolder"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnDie3"
+        app:layout_constraintEnd_toEndOf="@+id/btnDie3" />
+
+    <Button
+        android:id="@+id/btnRoleDie"
+        android:onClick="roll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorAccent"
+        android:text="@string/roleTxt"
+        android:textColor="@color/colorAccentText"
+        app:layout_constraintBottom_toTopOf="@+id/btnStop"
+        app:layout_constraintEnd_toEndOf="@+id/btnBank"
+        app:layout_constraintStart_toStartOf="@+id/btnStop" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
