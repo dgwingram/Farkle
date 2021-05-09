@@ -1,5 +1,5 @@
 # Farkle
-My attempt at the game Farkle for Android using Kotlin
+The game Farkle for Android using Kotlin
 
 ## Default Points
 | Dice | Qty | Points |
